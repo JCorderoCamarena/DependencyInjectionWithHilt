@@ -1,4 +1,4 @@
-package com.midtronics.android.library.hiltintegrationplayground
+package com.jorgecamarena.android.library.hiltintegrationplayground
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -20,7 +20,7 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals(
-            "com.midtronics.android.library.hiltintegrationplayground",
+            "com.jorgecamarena.android.library.hiltintegrationplayground",
             appContext.packageName
         )
     }

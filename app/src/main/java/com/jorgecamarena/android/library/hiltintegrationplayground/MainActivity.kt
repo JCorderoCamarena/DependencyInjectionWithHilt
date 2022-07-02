@@ -1,4 +1,4 @@
-package com.midtronics.android.library.hiltintegrationplayground
+package com.jorgecamarena.android.library.hiltintegrationplayground
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
