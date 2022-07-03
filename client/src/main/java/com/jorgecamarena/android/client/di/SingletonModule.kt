@@ -13,7 +13,7 @@ import javax.inject.Singleton
  **/
 @Module
 @InstallIn(SingletonComponent::class)
-class SingletonModule {
+object SingletonModule {
 
     @Provides
     fun providesSingletonInner(): SingletonSampleInner {

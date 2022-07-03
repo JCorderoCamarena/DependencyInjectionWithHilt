@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.client
+package com.jorgecamarena.android.client.basicInjection
 
 import android.util.Log
 
@@ -8,7 +8,7 @@ import android.util.Log
 class TestRepositoryInnerDependency {
     private val TAG = TestRepositoryInnerDependency::class.java.simpleName
     fun runSomeDummyTest() {
-        for (i in 1..10) {
+        for (i in 1..3) {
             Log.d(TAG, "runSomeDummyTest: $i")
         }
     }

@@ -9,6 +9,6 @@ class SingletonSampleInner {
     private val TAG = SingletonSampleInner::class.java.simpleName
 
     fun doSomeStuffHere() {
-        for (i in 1..5) Log.d(TAG, "doSomeStuffHere: $i")
+        for (i in 1..3) Log.d(TAG, "doSomeStuffHere: $i")
     }
 }

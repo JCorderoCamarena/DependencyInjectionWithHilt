@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.client
+package com.jorgecamarena.android.client.basicInjection
 
 import javax.inject.Inject
 

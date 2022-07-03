@@ -1,6 +1,6 @@
 package com.jorgecamarena.android.client.di
 
-import com.jorgecamarena.android.client.TestRepositoryInnerDependency
+import com.jorgecamarena.android.client.basicInjection.TestRepositoryInnerDependency
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,7 +11,7 @@ import dagger.hilt.android.components.ActivityComponent
  **/
 @Module
 @InstallIn(ActivityComponent::class)
-class TestModule {
+object BasicModule {
 
     @Provides
     fun providesInnerDependency(): TestRepositoryInnerDependency {
