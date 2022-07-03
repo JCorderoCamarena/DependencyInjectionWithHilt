@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HiltIntegrationPlayground</string>
     <string name="open_activity_b">Open Activity B</string>
+    <string name="back">Back</string>
 </resources>
