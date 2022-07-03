@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.library.hiltintegrationplayground
+package com.jorgecamarena.android.hiltintegrationplayground
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

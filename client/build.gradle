@@ -1,22 +1,19 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
 
 android {
-    compileSdkVersion build_versions.compile_sdk
-    buildToolsVersion build_versions.build_tools
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.jorgecamarena.android.hiltintegrationplayground"
-        minSdkVersion build_versions.min_sdk
-        targetSdkVersion build_versions.target_sdk
-        versionCode 1
-        versionName "1.0"
+        minSdk 19
+        targetSdk 32
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -34,6 +31,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation deps.core_ktx
     implementation deps.app_compat
@@ -44,8 +42,6 @@ dependencies {
     implementation deps.hilt_android
     kapt deps.hilt_kapt
     //endregion
-
-    implementation project(path: ":client")
 }
 
 //region Test Dependencies
