@@ -10,7 +10,7 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "com.jorgecamarena.android.library.hiltintegrationplayground"
+        applicationId "com.jorgecamarena.android.hiltintegrationplayground"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1

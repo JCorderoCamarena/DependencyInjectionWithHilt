@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.library.hiltintegrationplayground
+package com.jorgecamarena.android.hiltintegrationplayground
 
 import org.junit.Test
 
