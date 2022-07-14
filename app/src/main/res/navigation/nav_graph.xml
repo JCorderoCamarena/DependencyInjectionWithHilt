@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_singletonFragment"
+            app:destination="@id/singletonFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_multipleImplFragment"
+            app:destination="@id/multipleImplFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_basicDIFragment"
+            app:destination="@id/basicDIFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/basicDIFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.BasicDIFragment"
+        android:label="fragment_single_dependency"
+        tools:layout="@layout/fragment_basic_di" />
+
+    <fragment
+        android:id="@+id/singletonFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.SingletonFragment"
+        android:label="fragment_singleton"
+        tools:layout="@layout/fragment_singleton" >
+        <action
+            android:id="@+id/action_singletonFragment_to_singletonBFragment"
+            app:destination="@id/singletonBFragment"
+            app:popUpTo="@id/singletonFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/multipleImplFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.MultipleImplFragment"
+        android:label="fragment_multiple_impl"
+        tools:layout="@layout/fragment_multiple_impl" />
+
+    <fragment
+        android:id="@+id/singletonBFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.SingletonBFragment"
+        android:label="fragment_singleton_b"
+        tools:layout="@layout/fragment_singleton_b" />
+</navigation>

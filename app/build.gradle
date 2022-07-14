@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -43,6 +46,11 @@ dependencies {
     //region Hilt
     implementation deps.hilt_android
     kapt deps.hilt_kapt
+    //endregion
+
+    //region Navigation
+    implementation deps.navigation_fragment
+    implementation deps.navigation_ui
     //endregion
 
     implementation project(path: ":client")
