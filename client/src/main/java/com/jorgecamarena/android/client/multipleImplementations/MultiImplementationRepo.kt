@@ -6,7 +6,7 @@ package com.jorgecamarena.android.client.multipleImplementations
 class MultiImplementationRepo(
     private val dao: FakeDao
 ) {
-    fun runSomeStuff() {
-        dao.runSomeMethod()
-    }
+
+    fun runSomeStuff(): String = dao.runSomeMethod()
+
 }

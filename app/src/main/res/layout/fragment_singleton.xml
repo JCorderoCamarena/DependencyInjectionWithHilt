@@ -7,11 +7,63 @@
     tools:context=".ui.SingletonFragment">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Singleton A Screen"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/normalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/singletonBtn"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:text="Withouth Hilt"/>
+
+    <Button
+        android:id="@+id/singletonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toEndOf="@id/normalBtn"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="With Hilt"/>
+
+    <TextView
+        android:id="@+id/normalMemReferenceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Memory Reference without Hilt" />
+
+    <TextView
+        android:id="@+id/childDependencyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/normalMemReferenceLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Memory Reference with Hilt" />
+
+    <Button
+        android:id="@+id/navigateToSecondScreenBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@+id/childDependencyLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Go to Screen B" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

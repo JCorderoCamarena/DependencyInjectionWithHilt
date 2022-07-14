@@ -7,12 +7,35 @@
     tools:context=".ui.SingletonBFragment">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Singleton B Screen"
+        android:layout_margin="@dimen/margin_small"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/normalMemReferenceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Memory Reference without Hilt" />
+
+    <TextView
+        android:id="@+id/childDependencyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/normalMemReferenceLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Memory Reference with Hilt" />
 
 
 

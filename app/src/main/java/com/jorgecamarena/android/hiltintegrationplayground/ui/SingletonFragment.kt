@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.jorgecamarena.android.client.singletonInstance.SingletonSampleInner
 import com.jorgecamarena.android.client.singletonInstance.SingletonSampleRepo
+import com.jorgecamarena.android.hiltintegrationplayground.R
 import com.jorgecamarena.android.hiltintegrationplayground.databinding.FragmentSingletonBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -28,15 +30,29 @@ class SingletonFragment : Fragment() {
     ): View? {
         _binding = FragmentSingletonBinding.inflate(inflater, container, false)
         binding?.apply {
+            normalBtn.setOnClickListener {
+                val instance = "${useNormalInstance()}"
+                normalMemReferenceLabel.text = instance.substringAfterLast('.')
+            }
 
+            singletonBtn.setOnClickListener {
+                useInjectedInstance()
+                val instance = "$singletonSampleRepo"
+                hiltMemReferenceLabel.text = instance.substringAfterLast('.')
+            }
+
+            navigateToSecondScreenBtn.setOnClickListener {
+                findNavController().navigate(R.id.singletonBFragment)
+            }
         }
         return binding?.root
     }
 
-    private fun useNormalInstance() {
+    private fun useNormalInstance(): SingletonSampleRepo {
         val fakeSingleton = SingletonSampleRepo(SingletonSampleInner())
         fakeSingleton.doSomeStuff()
         Log.d(TAG, "useNormalInstance: $fakeSingleton")
+        return fakeSingleton
     }
 
     private fun useInjectedInstance() {

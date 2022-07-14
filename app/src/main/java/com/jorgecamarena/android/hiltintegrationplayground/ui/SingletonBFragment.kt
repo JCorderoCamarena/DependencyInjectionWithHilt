@@ -1,7 +1,6 @@
 package com.jorgecamarena.android.hiltintegrationplayground.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import android.view.ViewGroup
 import com.jorgecamarena.android.client.singletonInstance.SingletonSampleInner
 import com.jorgecamarena.android.client.singletonInstance.SingletonSampleRepo
 import com.jorgecamarena.android.hiltintegrationplayground.databinding.FragmentSingletonBBinding
-import com.jorgecamarena.android.hiltintegrationplayground.databinding.FragmentSingletonBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -27,23 +25,21 @@ class SingletonBFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = FragmentSingletonBBinding.inflate(inflater, container, false)
         binding?.apply {
-
+            normalMemReferenceLabel.text = getNormalMemoryReference()
+            hiltMemReferenceLabel.text = getInjectedMemoryReference()
         }
         return binding?.root
     }
 
-    private fun useNormalInstance() {
+    private fun getNormalMemoryReference(): String {
         val fakeSingleton = SingletonSampleRepo(SingletonSampleInner())
-        fakeSingleton.doSomeStuff()
-        Log.d(TAG, "useNormalInstance: $fakeSingleton")
+        return "$fakeSingleton".substringAfterLast('.')
     }
 
-    private fun useInjectedInstance() {
-        singletonSampleRepo.doSomeStuff()
-        Log.d(TAG, "useInjectedInstance: $singletonSampleRepo")
+    private fun getInjectedMemoryReference(): String {
+        return "$singletonSampleRepo".substringAfterLast('.')
     }
 
     override fun onDestroyView() {
