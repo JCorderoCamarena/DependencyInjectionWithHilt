@@ -16,3 +16,10 @@ Clean architecture and MVVM.
 - Gradle: 7.0.2
 - Kotlin: 1.7.0
 
+### Content:
+- Basic Injection
+- Singleton
+- Abstract class with Multiple Implementations
+- Injection when data is passed at runtime (AssistedInjection)
+- Injection with Inheritance
+
