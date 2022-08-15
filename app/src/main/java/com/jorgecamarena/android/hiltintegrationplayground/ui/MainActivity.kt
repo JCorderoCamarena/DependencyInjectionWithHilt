@@ -24,30 +24,11 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    @Inject lateinit var testRepository: TestRepository
-    @Inject lateinit var singletonSampleRepo: SingletonSampleRepo
-
-    @ChildFakeRepo
-    @Inject lateinit var childFakeRepo: MultiImplementationRepo
-
-    @BaseFakeRepo
-    @Inject lateinit var baseFakeRepo: MultiImplementationRepo
-
-    @OtherFakeRepo
-    @Inject lateinit var otherFakeRepo: MultiImplementationRepo
-
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        testRepository.testMethod()
-        singletonSampleRepo.doSomeStuff()
-        baseFakeRepo.runSomeStuff()
-        childFakeRepo.runSomeStuff()
-        otherFakeRepo.runSomeStuff()
-        Log.d("Test Singleton", "onCreate: $singletonSampleRepo")
     }
 
     override fun onStart() {

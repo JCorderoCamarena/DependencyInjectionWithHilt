@@ -22,10 +22,13 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding?.apply {
 
-            basicBtn.setOnClickListener { findNavController().navigate(R.id.basicDIFragment) }
-            singletonBtn.setOnClickListener { findNavController().navigate(R.id.singletonFragment) }
-            multiImplBtn.setOnClickListener { findNavController().navigate(R.id.multipleImplFragment) }
-
+            findNavController().run {
+                basicBtn.setOnClickListener { navigate(R.id.basicDIFragment) }
+                singletonBtn.setOnClickListener { navigate(R.id.singletonFragment) }
+                multiImplBtn.setOnClickListener { navigate(R.id.multipleImplFragment) }
+                assistedImplBtn.setOnClickListener { navigate(R.id.assistedInjectionFragment) }
+                inheritanceBtn.setOnClickListener { navigate(R.id.inheritanceFragment) }
+            }
         }
         return binding?.root
     }

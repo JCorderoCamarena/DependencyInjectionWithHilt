@@ -22,17 +22,23 @@
             android:id="@+id/action_homeFragment_to_basicDIFragment"
             app:destination="@id/basicDIFragment"
             app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_assistedInjectionFragment"
+            app:destination="@id/assistedInjectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_inheritanceFragment"
+            app:destination="@id/inheritanceFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/basicDIFragment"
-        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.BasicDIFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.basic.BasicDIFragment"
         android:label="fragment_single_dependency"
         tools:layout="@layout/fragment_basic_di" />
 
     <fragment
         android:id="@+id/singletonFragment"
-        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.SingletonFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.singleton.SingletonFragment"
         android:label="fragment_singleton"
         tools:layout="@layout/fragment_singleton" >
         <action
@@ -43,13 +49,23 @@
 
     <fragment
         android:id="@+id/multipleImplFragment"
-        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.MultipleImplFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.multipleImpl.MultipleImplFragment"
         android:label="fragment_multiple_impl"
         tools:layout="@layout/fragment_multiple_impl" />
 
     <fragment
         android:id="@+id/singletonBFragment"
-        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.SingletonBFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.singleton.SingletonBFragment"
         android:label="fragment_singleton_b"
         tools:layout="@layout/fragment_singleton_b" />
+    <fragment
+        android:id="@+id/assistedInjectionFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.assistedInjection.AssistedInjectionFragment"
+        android:label="fragment_assisted_injection"
+        tools:layout="@layout/fragment_assisted_injection" />
+    <fragment
+        android:id="@+id/inheritanceFragment"
+        android:name="com.jorgecamarena.android.hiltintegrationplayground.ui.inheritance.InheritanceFragment"
+        android:label="fragment_inheritance"
+        tools:layout="@layout/fragment_inheritance" />
 </navigation>

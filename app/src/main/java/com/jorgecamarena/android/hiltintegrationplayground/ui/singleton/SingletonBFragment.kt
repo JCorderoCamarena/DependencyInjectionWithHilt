@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.hiltintegrationplayground.ui
+package com.jorgecamarena.android.hiltintegrationplayground.ui.singleton
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -28,18 +28,18 @@ class SingletonBFragment : Fragment() {
         _binding = FragmentSingletonBBinding.inflate(inflater, container, false)
         binding?.apply {
             normalMemReferenceLabel.text = getNormalMemoryReference()
-            hiltMemReferenceLabel.text = getInjectedMemoryReference()
+            childDependencyLabel.text = getInjectedMemoryReference()
         }
         return binding?.root
     }
 
     private fun getNormalMemoryReference(): String {
         val fakeSingleton = SingletonSampleRepo(SingletonSampleInner())
-        return "$fakeSingleton".substringAfterLast('.')
+        return "Normal: $fakeSingleton".substringAfterLast('.')
     }
 
     private fun getInjectedMemoryReference(): String {
-        return "$singletonSampleRepo".substringAfterLast('.')
+        return "Hilt: $singletonSampleRepo".substringAfterLast('.')
     }
 
     override fun onDestroyView() {

@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.hiltintegrationplayground.ui
+package com.jorgecamarena.android.hiltintegrationplayground.ui.singleton
 
 import android.os.Bundle
 import android.util.Log
@@ -38,7 +38,7 @@ class SingletonFragment : Fragment() {
             singletonBtn.setOnClickListener {
                 useInjectedInstance()
                 val instance = "$singletonSampleRepo"
-                hiltMemReferenceLabel.text = instance.substringAfterLast('.')
+                childDependencyLabel.text = instance.substringAfterLast('.')
             }
 
             navigateToSecondScreenBtn.setOnClickListener {

@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.hiltintegrationplayground.ui
+package com.jorgecamarena.android.hiltintegrationplayground.ui.multipleImpl
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import com.jorgecamarena.android.client.di.BaseFakeRepo
 import com.jorgecamarena.android.client.di.ChildFakeRepo
 import com.jorgecamarena.android.client.di.OtherFakeRepo
 import com.jorgecamarena.android.client.multipleImplementations.MultiImplementationRepo
-import com.jorgecamarena.android.hiltintegrationplayground.R
 import com.jorgecamarena.android.hiltintegrationplayground.databinding.FragmentMultipleImplBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.jorgecamarena.android.hiltintegrationplayground.ui
+package com.jorgecamarena.android.hiltintegrationplayground.ui.basic
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

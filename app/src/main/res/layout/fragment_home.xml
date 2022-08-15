@@ -42,4 +42,22 @@
         app:layout_constraintStart_toEndOf="@id/singletonBtn"
         android:text="Multiple Impl" />
 
+    <Button
+        android:id="@+id/assistedImplBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toEndOf="@id/multiImplBtn"
+        android:text="Assisted Impl" />
+
+    <Button
+        android:id="@+id/inheritanceBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/basicBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Inheritance" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
