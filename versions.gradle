@@ -6,6 +6,7 @@ versions.kotlin_version     = "1.7.0"
 versions.core_ktx_version   = "1.8.0"
 versions.app_compat_version = "1.4.2"
 versions.material_version   = "1.6.1"
+versions.card_view_version   = "1.0.0"
 versions.constraint_layout_version = "2.1.4"
 versions.nav_version        = "2.5.0"
 
@@ -29,6 +30,7 @@ deps.hilt_gradle_plugin     = "com.google.dagger:hilt-android-gradle-plugin:$ver
 deps.core_ktx               = "androidx.core:core-ktx:$versions.core_ktx_version"
 deps.app_compat             = "androidx.appcompat:appcompat:$versions.app_compat_version"
 deps.material               = "com.google.android.material:material:$versions.material_version"
+deps.card_view              = "androidx.cardview:cardview:$versions.card_view_version"
 deps.constraint_layout      = "androidx.constraintlayout:constraintlayout:$versions.constraint_layout_version"
 
 deps.navigation_fragment    = "androidx.navigation:navigation-fragment-ktx:$versions.nav_version"

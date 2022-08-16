@@ -4,60 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.Material3.BodyLarge"
-        android:text="Sample Usages:"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsRecyclerView"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    <Button
-        android:id="@+id/basicBtn"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Basic DI" />
-
-    <Button
-        android:id="@+id/singletonBtn"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toEndOf="@id/basicBtn"
-        android:text="Singleton" />
-
-    <Button
-        android:id="@+id/multiImplBtn"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toEndOf="@id/singletonBtn"
-        android:text="Multiple Impl" />
-
-    <Button
-        android:id="@+id/assistedImplBtn"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toEndOf="@id/multiImplBtn"
-        android:text="Assisted Impl" />
-
-    <Button
-        android:id="@+id/inheritanceBtn"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="@dimen/margin_small"
-        app:layout_constraintTop_toBottomOf="@id/basicBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Inheritance" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

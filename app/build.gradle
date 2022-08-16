@@ -42,6 +42,7 @@ dependencies {
     implementation deps.app_compat
     implementation deps.material
     implementation deps.constraint_layout
+    implementation deps.card_view
 
     //region Hilt
     implementation deps.hilt_android
